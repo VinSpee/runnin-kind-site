@@ -10,7 +10,10 @@ gem "modular-scale"
 gem "singularitygs"
 gem "breakpoint"
 gem "middleman-minify-html"
+gem "middleman-autoprefixer"
+gem 'image_optim'
 gem "middleman-imageoptim"
+gem 'middleman-search_engine_sitemap'
 
 # Live-reloading plugin
 gem "middleman-livereload", "~> 3.1.0"

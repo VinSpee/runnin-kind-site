@@ -58,9 +58,12 @@ configure :build do
   # For example, change the Compass output style for deployment
 	#activate :minify_css
 	activate :autoprefixer
-	activate :image_min
+	activate :image_optim
 	activate :minify_html
 	activate :gzip
+
+	set :url_root, 'http://therunninkind.com'
+	activate :search_engine_sitemap
 
   # Minify Javascript on build
   # activate :minify_javascript
