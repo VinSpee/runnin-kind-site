@@ -1,0 +1,57 @@
+$rounded: ms(-2)
+%rounded
+	border-radius: $rounded
+
+%rounded--top
+	border-top-left-radius: $rounded
+	border-top-right-radius: $rounded
+
+%rounded--bottom
+	border-bottom-left-radius: $rounded
+	border-bottom-right-radius: $rounded
+
+%group
+	+clearfix
+
+=hide
+	border: 0
+	clip: rect(0 0 0 0)
+	height: 1px
+	width: 1px
+	margin: -1px
+	padding: 0
+	overflow: hidden
+	position: absolute
+
+=unhide
+	width: auto
+	clip: none
+	margin: 0
+	position: relative
+	height: auto
+
+// Compatability
+
+%reset-form
+	appearance: none
+	padding: 0
+	margin: 0
+	border: 0
+	font-size: $base-font-size
+
+=padding-x($left: 0, $right: false)
+	@if $right
+		padding-left: $left
+		padding-right: $right
+	@else
+		padding-left: $left
+		padding-right: $left
+
+
+=margin-x($left: 0, $right: false)
+	@if $right
+		margin-left: $left
+		margin-right: $right
+	@else
+		margin-left: $left
+		margin-right: $left

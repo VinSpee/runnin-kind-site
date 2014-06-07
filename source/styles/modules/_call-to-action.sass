@@ -1,0 +1,24 @@
+.call-to-action
+	@extend %group
+	width: 100%
+	max-width: 775px
+	+margin-x(auto)
+	margin-bottom: ms(0)
+
+.call-to-action__call
+	text-align: center
+	+breakpoint(550px)
+		text-align: right
+		float: left
+		width: 50%
+		padding-right: ms(0)
+
+.call-to-action__text
+	line-height: 2.88
+
+.call-to-action__action
+	text-align: center
+	+breakpoint(550px)
+		float: right
+		text-align: left
+		width: 50%

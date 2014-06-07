@@ -1,0 +1,32 @@
+.event
+	margin: 0 .25rem 1rem
+
+.event__title
+	@extend .component-headline
+	text-transform: uppercase
+	padding: .5rem
+	background: tint($background, 40%)
+	box-shadow: inset .25rem 0 0 0 $accent, inset 0 .25rem 0 0 $accent, inset -.25rem 0 0 0 shade($accent, 10%)
+
+.event__location
+	display: block
+	padding: .5rem
+	background: tint($background, 40%)
+	box-shadow: inset .25rem 0 0 0 $accent, inset -.25rem 0 0 0 shade($accent, 10%)
+
+.event__schedule
+	display: table
+	width: 100%
+
+.event__date
+	display: table-cell
+	background: $accent
+	padding: ms(-4)
+	@extend %font__headline
+	color: $background
+	font-size: ms(1)
+
+.event__time
+	@extend .event__date
+	background: shade($accent, 10%)
+	text-align: right

@@ -1,0 +1,45 @@
+---
+title: "Booking | Bobby Black & The Runnin' Kind"
+---
+<div class="page">
+
+	<h1 class="section-headline">Booking</h1>
+
+	<div class="illustrated">
+		<figure class="illustrated__content">
+			<div class="illustrated__illustration">
+				<%= image_tag "sugar-black-productions.jpg" %>
+			</div>
+			<figcaption class="illustrated__action">
+				<a href="tel:+13137721244">(313)772-1244</a>
+			</figcaption>
+		</figure>
+	</div>
+	<div class="booking-form">
+		<form method="POST" action="http://forms.brace.io/vince@therunninkind.com">
+			<ul class="user-input">
+				<li>
+					<label for="name">Name</label>
+					<input name="name" type="text" id="name" placeholder="Johnny Cash">
+				</li>
+				<li>
+					<label for="email">Email address</label>
+					<input name="_replyto" type="email" id="email" placeholder="thecottonmouth@cashmusic.com">
+				</li>
+				<li>
+					<label for="email">Phone Number</label>
+					<input name="_replyto" type="text" placeholder="(313)123-4567">
+				</li>
+				<li>
+					<label for="message">Details</label>
+					<textarea name="message" rows="3" placeholder="Gentlemen, I'm interested in havin' the bunch of y'all play a couple numbers for me here…"></textarea>
+				</li>
+			</ul>
+
+			<button class="button--submit" type="submit">Submit</button>
+			<input type="hidden" name="_next" value="http://therunninkind.com/thanks.html" />
+
+		</form>
+	</div>
+
+</div>

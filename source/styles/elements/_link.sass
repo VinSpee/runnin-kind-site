@@ -1,0 +1,10 @@
+a
+	color: $accent
+	transition: color .2s linear
+	text-decoration: none
+	&:hover
+		text-decoration: underline
+		color: shade($accent, 10%)
+	&:active
+		transition: none
+		color: tint($accent, 10%)

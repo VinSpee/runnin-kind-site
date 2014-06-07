@@ -1,0 +1,30 @@
+%font__headline
+	font-family: "source-sans-pro"
+	font-weight: 900
+	text-transform: uppercase
+
+%font__copy
+	font-family: "source-serif-pro", serif
+	font-weight: 400
+
+$base-font-size: 18px
+$base-line-height : 1.65
+
+html
+	+content-fade-in
+	font-size: $base-font-size
+	line-height: $base-line-height
+	@extend %font__copy
+	color: $primary
+
+p
+	line-height: 1.65
+	max-width: 560px
+	width: 95%
+	margin: 0 auto ms(0)
+	&:last-of-type
+		margin-bottom: 0
+
+// Modular Scale
+$ms-base: 1rem
+$ms-ratio: $fourth $golden

@@ -1,0 +1,36 @@
+label
+	display: block
+	margin-bottom: ms(-6)
+	&:after
+		content: ":"
+
+input, input[type=text], input[type=email], textarea
+	@extend %reset-form
+	@extend %font__headline
+	font-size: ms(2)
+	width: 100%
+	padding: ms(-10) ms(-5)
+	box-shadow: 0 0 0 2px shade($background, 10%)
+	color: $primary
+	background: tint($background, 80%)
+	&:focus
+		box-shadow: 0 0 0 2px $accent
+
+textarea
+	line-height: 1.1
+
+.user-input
+	width: 95%
+	max-width: 560px
+	+margin-x(auto)
+	> li
+		margin-bottom: ms(0)
+
+.button--submit
+	@extend .button
+	@extend %font__copy
+	display: block
+	width: 95%
+	+margin-x(auto)
+	margin-bottom: ms(-2)
+	max-width: 560px

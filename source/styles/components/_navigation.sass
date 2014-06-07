@@ -1,0 +1,49 @@
+.navigation__toggle
+	@extend .button
+	@extend %font__copy
+	width: 100%
+	text-align: center
+	&:focus
+		+ .navigation
+			+unhide
+		&:hover
+			background: $accent
+	+breakpoint(707px)
+		display: none
+
+.navigation
+	//+hide
+	+breakpoint(707px)
+		+unhide
+		display: table
+		width: 100%
+
+.navigation__item
+	&:last-of-type
+		> .navigation__action
+			margin-bottom: 0
+	+breakpoint(707px)
+		display: table-cell
+		text-align: center
+
+.navigation__action
+	text-decoration: none
+	display: block
+	@extend %font__headline
+	font-size: ms(1)
+	padding: 1rem .5rem
+	margin-bottom: 2px
+	color: $accent
+	background: tint($background, 40%)
+	transition: all .1s linear
+	&--active
+		@extend .navigation__action
+		background: $accent
+		color: tint($background, 40%)
+	&:hover
+		background: $accent
+		color: tint($background, 40%)
+		text-decoration: none
+	&:active
+		transition: none
+		background: shade($accent, 10%)

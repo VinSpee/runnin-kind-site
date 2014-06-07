@@ -1,0 +1,39 @@
+AddEncoding gzip .gz
+ 
+RewriteEngine on
+RewriteCond %{HTTP:Accept-encoding} gzip
+RewriteCond %{HTTP_USER_AGENT} !Konqueror
+RewriteCond %{REQUEST_FILENAME}.gz -f
+RewriteRule ^(.*)\.css$ $1.css.gz [QSA,L]
+RewriteRule ^(.*)\.js$ $1.js.gz [QSA,L]
+RewriteRule ^(.*)\.html$ $1.html.gz [QSA,L]
+
+<Files *.css.gz>
+ForceType text/css
+</Files>
+<Files *.js.gz>
+ForceType application/javascript
+</Files>
+<Files *.html.gz>
+ForceType text/html
+</Files>
+
+# Set up caching
+# http://www.askapache.com/htaccess/speed-up-sites-with-htaccess-caching.html#Apache_htaccess_caching_code
+
+# 1 YEAR
+<filesMatch "\.(ico|pdf|flv|jpeg|jpg|gif|png|svg|swf)$">
+Header set Cache-Control "max-age=29030400, public"
+</filesMatch>
+# 1 WEEK
+<filesMatch "\.(css|js)$">
+Header set Cache-Control "max-age=604800, public"
+</filesMatch>
+# 2 DAYS
+<filesMatch "\.(xml|txt)$">
+Header set Cache-Control "max-age=172800, proxy-revalidate"
+</filesMatch>
+# 1 MIN
+<filesMatch "\.(html|htm|php)$">
+Header set Cache-Control "max-age=60, private, proxy-revalidate"
+</filesMatch>

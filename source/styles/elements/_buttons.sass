@@ -1,0 +1,21 @@
+.button
+	display: inline-block
+	@extend %reset-form
+	text-transform: uppercase
+	padding: .75rem 1rem
+	font-size: ms(1)
+	font-weight: 700
+	background: $accent
+	color: tint($background, 40%)
+	cursor: pointer
+	transition: background .15s linear
+	&:hover
+		background: tint($accent, 10%)
+		color: tint($background, 40%)
+		text-decoration: none
+	&:active
+		transition: none
+		background: shade($accent, 10%)
+
+.call-to-action__button
+	@extend .button

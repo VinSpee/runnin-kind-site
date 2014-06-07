@@ -1,0 +1,25 @@
+.song
+	width: 100%
+	margin-bottom: .25rem
+	box-shadow: inset ms(-3) 0 0 0 mix($accent, $background, 20%)
+	padding-left: ms(0)
+	padding-bottom: .25rem
+	padding-top: .25rem
+	margin-left: ms(0)
+	+breakpoint(723px)
+		width: 47%
+		display: inline-block
+
+.song__title, .song__artist
+	//display: table-cell
+	//vertical-align: middle
+	width: 90%
+	word-wrap: break-word
+
+.song__title
+	//text-align: right
+	//padding-right: ms(0)
+	font-size: ms(1)
+
+.song__artist
+	font-weight: 700
